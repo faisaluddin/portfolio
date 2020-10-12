@@ -328,7 +328,7 @@ a {
     font-size: 1.6rem;
     line-height: 1.5;
     text-align: center;
-    color: #fff;
+    color: $color-white;
     top: auto;
     left: auto;
     right: 30px;
@@ -343,7 +343,7 @@ a {
   position: fixed;
   display: none;
   background: $color-primary-dark;
-  color: #fff;
+  color: $color-white;
   width: 44px;
   height: 44px;
   text-align: center;
@@ -357,7 +357,7 @@ a {
 
   i {
     padding-top: 12px;
-    color: #fff;
+    color: $color-white;
   }
 
   @media (max-width: 768px) {
@@ -374,7 +374,7 @@ a {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #fff;
+  background: $color-white;
 }
 
 #preloader:before {
@@ -425,7 +425,7 @@ a {
     }
 
     .nav-link {
-      color: #fff;
+      color: $color-white;
       text-transform: uppercase;
       font-weight: 600;
 
@@ -466,11 +466,11 @@ a {
   &.navbar-trans {
     .nav-link {
       &:before {
-        background-color: #fff;
+        background-color: $color-white;
       }
 
       &:hover {
-        color: #fff;
+        color: $color-white;
       }
     }
 
@@ -478,13 +478,13 @@ a {
     .active > .nav-link,
     .nav-link.show,
     .nav-link.active {
-      color: #fff;
+      color: $color-white;
     }
   }
 
   &.navbar-reduce {
     transition: all 0.5s ease-in-out;
-    background-color: #fff;
+    background-color: $color-white;
     padding-top: 15px;
     padding-bottom: 15px;
 
@@ -517,7 +517,7 @@ a {
   }
 
   .navbar-brand {
-    color: #fff;
+    color: $color-white;
     font-size: 1.6rem;
     font-weight: 600;
   }
@@ -539,7 +539,7 @@ a {
 
       &:hover {
         background-color: $color-primary;
-        color: #fff;
+        color: $color-white;
         transition: all 500ms ease;
       }
 
@@ -562,7 +562,7 @@ a {
 
 .navbar-toggler span {
   display: block;
-  background-color: #fff;
+  background-color: $color-white;
   height: 3px;
   width: 25px;
   margin-top: 4px;
@@ -605,7 +605,7 @@ a {
 .intro {
   height: 100vh;
   position: relative;
-  color: #fff;
+  color: $color-white;
 
   .intro-content {
     text-align: center;
@@ -624,7 +624,7 @@ a {
   }
 
   .intro-title {
-    color: #fff;
+    color: $color-white;
     font-weight: 600;
     font-size: 3rem;
 
@@ -678,7 +678,7 @@ a {
     }
 
     a {
-      color: #fff;
+      color: $color-white;
     }
   }
 }
@@ -751,7 +751,7 @@ picture {
 
   .service-box {
     @extend .box-shadow;
-    background-color: #fff;
+    background-color: $color-white;
     padding: 2.5rem 1.3rem;
     border-radius: 1rem;
     margin-bottom: 3rem;
@@ -759,7 +759,7 @@ picture {
     &:hover {
       .ico-circle {
         transition: all 500ms ease;
-        color: #fff;
+        color: $color-white;
         background-color: $color-primary;
         box-shadow: 0 0 0 10px $color-primary-light;
       }
@@ -796,7 +796,7 @@ picture {
   font-weight: 600;
   font-size: 20px;
   border-radius: 50px;
-  border: 2px solid #fff;
+  border: 2px solid $color-white;
   transition: 0.3s;
 
   &:hover {
@@ -829,7 +829,7 @@ picture {
   @extend .box-shadow;
   margin-bottom: 3rem;
   backface-visibility: hidden;
-  background-color: #fff;
+  background-color: $color-white;
 
   &:hover {
     img {
@@ -886,7 +886,7 @@ picture {
 }
 
 .testimonial-box {
-  color: #fff;
+  color: $color-white;
   text-align: center;
 
   .author-test {
@@ -898,7 +898,7 @@ picture {
   }
 
   .author {
-    color: #fff;
+    color: $color-white;
     text-transform: uppercase;
     font-weight: 600;
     margin: 1rem 0;
@@ -909,7 +909,7 @@ picture {
   .comit {
     font-size: 2rem;
     color: $color-primary;
-    background-color: #fff;
+    background-color: $color-white;
     width: 52px;
     height: 52px;
     display: block;
@@ -959,14 +959,14 @@ picture {
 
   .card-category {
     display: inline-block;
-    color: #fff;
+    color: $color-white;
     padding: 0 15px 5px;
     overflow: hidden;
     background-color: $color-primary;
     border-radius: 4px;
 
     .category {
-      color: #fff;
+      color: $color-white;
       display: inline-block;
       text-transform: uppercase;
       font-size: 0.7rem;
@@ -1002,7 +1002,7 @@ picture {
 .box-comments,
 .widget-sidebar {
   padding: 2rem;
-  background-color: #fff;
+  background-color: $color-white;
   margin-bottom: 3rem;
 
   @media (min-width: 768px) {
@@ -1130,7 +1130,7 @@ picture {
 
 .sidebar-search {
   input {
-    background-color: #fff;
+    background-color: $color-white;
     border-radius: 0;
     transition: all 0.5s ease-in-out;
   }
@@ -1156,7 +1156,7 @@ picture {
       border-radius: 15px;
 
       a {
-        color: #fff;
+        color: $color-white;
       }
     }
   }
@@ -1209,7 +1209,7 @@ footer {
     margin-bottom: 0;
 
     a {
-      color: #fff;
+      color: $color-white;
     }
   }
 }
@@ -1272,7 +1272,7 @@ footer {
 
   &:hover {
     background-color: $color-primary-dark;
-    color: #fff;
+    color: $color-white;
     transition: all 500ms ease;
     @extend .box-shadow-a;
   }
@@ -1280,7 +1280,7 @@ footer {
 
 .button-a {
   background-color: $color-primary;
-  color: #fff;
+  color: $color-white;
   border-color: $color-primary-light;
 }
 
