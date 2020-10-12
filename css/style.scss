@@ -1,6 +1,5 @@
-
 //== COLORS
-$color-primary: #0078ff !default;
+$color-primary: #866ec7 !default;
 $color-primary-light: #cde1f8 !default;
 $color-primary-dark: #0062d3 !default;
 
@@ -9,11 +8,14 @@ $color-secondary-dark: #676767 !default;
 
 $color-text-primary: #4e4e4e !default;
 $color-text-secondary: #1e1e1e !default;
-
+$color-white: #fff;
 
 /*======================================
 //--//-->   STYLES GENERALES
 ======================================*/
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: $color-secondary;
   color: $color-text-primary;
@@ -49,6 +51,10 @@ a {
 
 .color-d {
   color: $color-secondary;
+}
+
+.color-l {
+  color: $color-white;
 }
 
 .color-text-a {
@@ -87,6 +93,7 @@ a {
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
+  background-image: url(../img/laptop.jpg);
   @media (max-width: 1024px) {
     background-attachment: scroll;
   }
@@ -103,12 +110,17 @@ a {
   padding: 0;
   height: 100%;
   width: 100%;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .paralax-mf {
   position: relative;
   padding: 8rem 0;
+  background-image: url(../img/desk_laptop.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
   @extend .box-shadow;
 }
 
@@ -175,7 +187,7 @@ a {
   position: relative;
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     height: 3px;
     background-color: $color-primary;
@@ -192,9 +204,9 @@ a {
 .box-shadow-full {
   padding: 3rem 1.25rem;
   position: relative;
-  background-color: #fff;
   margin-bottom: 3rem;
   z-index: 2;
+  background: $color-white;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 
   @media (min-width: 768px) {
@@ -215,8 +227,11 @@ a {
   }
 
   .ico-circle {
-    height: 40px;
-    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
     font-size: 1.7rem;
     border-radius: 50%;
     line-height: 1.4;
@@ -226,7 +241,6 @@ a {
 
     &:hover {
       background-color: $color-primary;
-      color: #fff;
       box-shadow: 0 0 0 3px $color-primary-light;
       transition: all 500ms ease;
     }
@@ -291,7 +305,7 @@ a {
 
       &.active {
         span {
-          background-color: #1B1B1B;
+          background-color: #1b1b1b;
           width: 25px;
         }
       }
@@ -310,7 +324,7 @@ a {
     width: 42px;
     height: 42px;
     background-color: $color-primary;
-    opacity: .7;
+    opacity: 0.7;
     font-size: 1.6rem;
     line-height: 1.5;
     text-align: center;
@@ -328,7 +342,7 @@ a {
 .back-to-top {
   position: fixed;
   display: none;
-  background: $color-primary;
+  background: $color-primary-dark;
   color: #fff;
   width: 44px;
   height: 44px;
@@ -336,7 +350,7 @@ a {
   line-height: 1;
   font-size: 16px;
   border-radius: 50%;
-  right:15px;
+  right: 15px;
   bottom: 15px;
   transition: background 0.5s;
   z-index: 11;
@@ -346,8 +360,8 @@ a {
     color: #fff;
   }
 
-  @media (max-width: 768px){
-   bottom: 15px;
+  @media (max-width: 768px) {
+    bottom: 15px;
   }
 }
 
@@ -377,21 +391,25 @@ a {
 }
 
 @keyframes animate-preloader {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*======================================
 //--//-->   NAVBAR
 ======================================*/
 .navbar-b {
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   background-color: transparent;
   padding-top: 1.563rem;
   padding-bottom: 1.563rem;
 
   &.navbar-reduce {
-    box-shadow: 0px 6px 9px 0px rgba(0,0,0,.06);
+    box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
   }
 
   &.navbar-trans,
@@ -412,7 +430,7 @@ a {
       font-weight: 600;
 
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         margin-left: 0px;
         width: 0%;
@@ -427,7 +445,7 @@ a {
       }
 
       &:hover {
-        color: #1B1B1B;
+        color: #1b1b1b;
 
         &:before {
           width: 35px;
@@ -435,8 +453,8 @@ a {
       }
     }
 
-    .show>.nav-link,
-    .active>.nav-link,
+    .show > .nav-link,
+    .active > .nav-link,
     .nav-link.show,
     .nav-link.active {
       &:before {
@@ -456,8 +474,8 @@ a {
       }
     }
 
-    .show>.nav-link,
-    .active>.nav-link,
+    .show > .nav-link,
+    .active > .nav-link,
     .nav-link.show,
     .nav-link.active {
       color: #fff;
@@ -465,7 +483,7 @@ a {
   }
 
   &.navbar-reduce {
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     background-color: #fff;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -482,8 +500,8 @@ a {
       }
     }
 
-    .show>.nav-link,
-    .active>.nav-link,
+    .show > .nav-link,
+    .active > .nav-link,
     .nav-link.show,
     .nav-link.active {
       color: $color-primary;
@@ -494,7 +512,7 @@ a {
     }
 
     .navbar-toggler span {
-      background-color: #1B1B1B;
+      background-color: #1b1b1b;
     }
   }
 
@@ -503,8 +521,6 @@ a {
     font-size: 1.6rem;
     font-weight: 600;
   }
-
-  .dropdown:hover>.dropdown-menu {}
 
   .navbar-nav .dropdown-item.show .dropdown-menu,
   .dropdown.show .dropdown-menu,
@@ -518,7 +534,7 @@ a {
     border-radius: 0;
 
     .dropdown-item {
-      padding: .7rem 1.7rem;
+      padding: 0.7rem 1.7rem;
       transition: all 500ms ease;
 
       &:hover {
@@ -558,7 +574,7 @@ a {
 
 .navbar-toggler span:nth-child(1),
 .navbar-toggler span:nth-child(3) {
-  transition: transform .35s ease-in-out;
+  transition: transform 0.35s ease-in-out;
 }
 
 .navbar-toggler:not(.collapsed) span:nth-child(1) {
@@ -591,7 +607,6 @@ a {
   position: relative;
   color: #fff;
 
-
   .intro-content {
     text-align: center;
     position: absolute;
@@ -605,7 +620,7 @@ a {
     padding: 0;
     height: 100%;
     width: 100%;
-    opacity: .9;
+    opacity: 0.9;
   }
 
   .intro-title {
@@ -671,10 +686,22 @@ a {
 /*======================================
 //--//-->   ABOUT
 ======================================*/
+picture {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-pic {
+  height: 250px;
+  border-radius: 50% !important;
+  margin-left: auto;
+}
+
 .about-mf {
   .box-shadow-full {
     padding-top: 4rem;
     padding-bottom: 4rem;
+    background: $color-white;
   }
 
   .about-img {
@@ -700,12 +727,12 @@ a {
 
   .progress {
     background-color: $color-primary-light;
-    margin: .5rem 0 1.2rem 0;
+    margin: 0.5rem 0 1.2rem 0;
     border-radius: 0;
-    height: .7rem;
+    height: 0.7rem;
 
     .progress-bar {
-      height: .7rem;
+      height: 0.7rem;
       background-color: $color-primary;
     }
   }
@@ -714,53 +741,66 @@ a {
 /*======================================
 //--//-->   SERVICES
 ======================================*/
-.service-box {
-  @extend .box-shadow;
-  background-color: #fff;
-  padding: 2.5rem 1.3rem;
-  border-radius: 1rem;
-  margin-bottom: 3rem;
+.grids {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  list-style: none;
+  text-align: start;
+  font-weight: 400;
+  column-gap: 2rem;
 
-  &:hover {
+  .service-box {
+    @extend .box-shadow;
+    background-color: #fff;
+    padding: 2.5rem 1.3rem;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+
+    &:hover {
+      .ico-circle {
+        transition: all 500ms ease;
+        color: #fff;
+        background-color: $color-primary;
+        box-shadow: 0 0 0 10px $color-primary-light;
+      }
+    }
+
+    .service-ico {
+      margin-bottom: 1rem;
+      color: $color-text-secondary;
+    }
+
     .ico-circle {
       transition: all 500ms ease;
-      color: #fff;
-      background-color: $color-primary;
-      box-shadow: 0 0 0 10px $color-primary-light;
+      font-size: 4rem;
     }
-  }
 
-  .service-ico {
-    margin-bottom: 1rem;
-    color: $color-text-secondary;
-  }
+    .s-title {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0.4rem 0;
+    }
 
-  .ico-circle {
-    transition: all 500ms ease;
-    font-size: 4rem;
-  }
-
-  .s-title {
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    text-align: center;
-    padding: .4rem 0;
-  }
-
-  .s-description {
-    color: $color-text-primary;
+    .s-description {
+      color: $color-text-primary;
+    }
   }
 }
 
 /*======================================
 //--//-->   COUNTER
 ======================================*/
-.counter-box {
-  color: #fff;
-  text-align: center;
+#cta-btn-contact {
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  transition: 0.3s;
 
-  @media (min-width: 577px) {
-    margin-bottom: 1.8rem;
+  &:hover {
+    background-color: $color-primary-light;
   }
 }
 
@@ -812,7 +852,7 @@ a {
 
   .w-more {
     color: $color-text-primary;
-    font-size: .8rem;
+    font-size: 0.8rem;
 
     .w-ctegory {
       color: $color-primary;
@@ -829,7 +869,7 @@ a {
     }
 
     .num-like {
-      font-size: .7rem;
+      font-size: 0.7rem;
     }
   }
 }
@@ -929,15 +969,15 @@ a {
       color: #fff;
       display: inline-block;
       text-transform: uppercase;
-      font-size: .7rem;
-      letter-spacing: .1px;
+      font-size: 0.7rem;
+      letter-spacing: 0.1px;
       margin-bottom: 0;
     }
   }
 
   .card-title {
     font-size: 1.3rem;
-    margin-top: .6rem;
+    margin-top: 0.6rem;
   }
 
   .card-description {
@@ -951,7 +991,6 @@ a {
   .post-date {
     color: $color-text-primary;
     display: inline-block;
-    float: right;
   }
 }
 
@@ -1112,8 +1151,8 @@ a {
     li {
       display: inline-block;
       background-color: $color-primary;
-      padding: .2rem .6rem;
-      margin-bottom: .5rem;
+      padding: 0.2rem 0.6rem;
+      margin-bottom: 0.5rem;
       border-radius: 15px;
 
       a {
@@ -1126,6 +1165,16 @@ a {
 /*======================================
 //--//-->   CONTACT
 ======================================*/
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h5 {
+    font-size: 40px;
+  }
+}
+
 .footer-paralax {
   padding: 4rem 0 0 0;
 }
@@ -1145,12 +1194,15 @@ a {
 //--//-->   FOOTER
 ======================================*/
 footer {
-  text-align: center;
-  color: #fff;
-  padding-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  height: 60px;
+  background-color: $color-primary;
 
   .copyright {
-    margin-bottom: .3rem;
+    margin-bottom: 0.3rem;
   }
 
   .credits {
@@ -1167,48 +1219,49 @@ footer {
 ======================================*/
 #sendmessage {
   color: $color-primary;
-  border:1px solid $color-primary;
-  display:none;
-  text-align:center;
-  padding:15px;
-  font-weight:600;
-  margin-bottom:15px;
+  border: 1px solid $color-primary;
+  display: none;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 #errormessage {
   color: red;
-  display:none;
-  border:1px solid red;
-  text-align:center;
-  padding:15px;
-  font-weight:600;
-  margin-bottom:15px;
+  display: none;
+  border: 1px solid red;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-#sendmessage.show, #errormessage.show, .show {
-  display:block;
+#sendmessage.show,
+#errormessage.show,
+.show {
+  display: block;
 }
 
 .validation {
   color: red;
-  display:none;
+  display: none;
   margin: 0 0 20px;
-  font-weight:400;
-  font-size:13px;
+  font-weight: 400;
+  font-size: 13px;
 }
-
 
 /*======================================
 //--//-->   BUTTON
 ======================================*/
 .button {
   display: inline-block;
-  padding: .3rem .6rem;
+  padding: 0.3rem 0.6rem;
   text-align: center;
   vertical-align: middle;
   user-select: none;
   font-size: 1rem;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   border: 1px solid transparent;
   transition: all 500ms ease;
   cursor: pointer;
@@ -1232,7 +1285,7 @@ footer {
 }
 
 .button-big {
-  padding: .9rem 2.3rem;
+  padding: 0.9rem 2.3rem;
   font-size: 1.2rem;
 }
 
@@ -1241,8 +1294,8 @@ footer {
 }
 
 .btn-lg {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
 }
